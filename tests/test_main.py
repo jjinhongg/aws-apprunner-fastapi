@@ -1,7 +1,8 @@
 # write a test case for main.py
 import pytest
+import main
+from main import app
 from fastapi.testclient import TestClient
-from main import *
 
 client = TestClient(app)
 
@@ -12,7 +13,7 @@ def test_root():
 
 def test_say_hello():
     name = "Alice"
-    response = client.get(f"/say_hello/{name}")
+    response = client.get(f"/hello/{name}")
     assert response.status_code == 200
     assert response.json() == {"message": f"Hello {name}"}
     

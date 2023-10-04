@@ -1,5 +1,8 @@
 fastapi
 black
 pytest
+pytest-cov
+coverage
+httpx
 pylint
 uvicorn[standard]

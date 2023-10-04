@@ -2,8 +2,14 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
+.PHONY: test
+
 test:
-	python -m pytest -vv test_main.py
+	export PYTHONPATH=$$PYTHONPATH:$(PWD); \
+	pytest --cov=main tests
+	coverage report -m
+	coverage html
+
 
 format:
 	black *.py
