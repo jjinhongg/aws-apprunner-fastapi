@@ -6,3 +6,4 @@ coverage
 httpx
 pylint
 uvicorn[standard]
+git-remote-codecommit
