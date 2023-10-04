@@ -1,0 +1,3 @@
+{"filter":false,"title":".gitignore","tooltip":"/.gitignore","undoManager":{"mark":-1,"position":-1,"stack":[]},"ace":{"folds":[],"scrolltop":0,"scrollleft":0,"selection":{"start":{"row":2,"column":0},"end":{"row":2,"column":0},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":0},"timestamp":1696404034946,"hash":"2d81e955353b73a6b9edd442b7cfbf1f67312d1a"}
+aws-apprunner-fastapi
+aws-apprunner-fastapi.pub
