@@ -11,6 +11,9 @@ phases:
   build:
     commands:
       - make test
+  post_build:
+    commands:
+      - aws s3 cp s3://codepipeline-ap-southeast-2-810918552399/fastapi-apprunner-pi/
 artifacts:
   files:
     - htmlcov/**/*
