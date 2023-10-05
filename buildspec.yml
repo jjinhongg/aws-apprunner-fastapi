@@ -13,7 +13,7 @@ phases:
       - make test
   post_build:
     commands:
-      - aws s3 cp s3://codepipeline-ap-southeast-2-810918552399/fastapi-apprunner-pi/
+      - aws s3 cp s3://codepipeline-ap-southeast-2-810918552399/fastapi-apprunner-pi/SourceArti/
 artifacts:
   files:
     - htmlcov/**/*
