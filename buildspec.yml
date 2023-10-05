@@ -3,18 +3,18 @@ version: 0.2
 phases:
   install:
     commands:
-      - make install
+      - make install # run the install command from your makefile
   pre_build:
     commands:
-      - make format
-      - make lint
+      - make format # run the format command from your makefile
+      - make lint # run the lint command from your makefile
   build:
     commands:
-      - make test
+      - make test # run the test command from your makefile
   post_build:
     commands:
-      - aws s3 cp s3://codepipeline-ap-southeast-2-810918552399/fastapi-apprunner-pi/SourceArti/
+      - aws s3 cp --recursive htmlcov s3://codepipeline-ap-southeast-2-810918552399/fastapi-apprunner-pi/SourceArti/ # copy the htmlcov directory and its contents to S3
 artifacts:
   files:
-    - htmlcov/**/*
-  base-directory: 'htmlcov'
+    - htmlcov/**/* # include all files in the htmlcov directory as artifacts
+  base-directory: 'htmlcov' # specify the base directory for the artifacts
